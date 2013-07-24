@@ -44,3 +44,4 @@ def lcm(n):
   return r
 
 print lcm(20)
+print lcm(100)

@@ -1,22 +1,21 @@
 """
 WARNING: THIS IS $11.60/hr TO RUN!
 
+
 ~/.boto should look like this:
 [Credentials]
 aws_access_key_id = YOURCREDSGOHEREWITHNOQUOTES
-aws_secret_access_key = YOURCREDSGOHERE
-
-and you need your AWS keys downloaded to ~/.ec2
+aws_secret_access_key = YOURCREDSGOHEREWITHNOQUOTES
 
 Then just invoke this script.
 You can check here for what's been reported by everyone running this:
-http://lewisjellis.webscript.io/skeinlog?show=true
+http://lewisjellis.webscript.io/skeinlog?showSorted=true
 """
 
 import boto
 
 ec2_instance_type = 'c1.xlarge' # our AMI uses 8 cores
-num_instances = 20
+num_instances = 20 # max any random AWS account can run
 ami_id = 'ami-6865f158' # this is our custom AMI
 
 

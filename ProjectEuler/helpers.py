@@ -23,7 +23,7 @@ def sieve(n):
     if not b:
       continue
     m = 2
-    while m*p < len(s): # probably a way to do this with for .. range?
+    while m*p < len(s): # probably a way to do this with for .. range?...yea I did this somewhere, I should update this
       s[m*p] = False
       m += 1
   return [i for (i, b) in enumerate(s) if b]
