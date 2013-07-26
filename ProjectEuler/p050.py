@@ -4,7 +4,10 @@ lim = 1000000
 p = sieve(lim)
 pc = len(p)
 
-# how many consecutive primes to sum
+for p in reverse(p):
+
+
+# how many consecutive primes to 88640sum
 n = 21
 # index of first one
 i = 0
@@ -12,7 +15,7 @@ i = 0
 def s():
     return sum(p[i:i+n])
 
-while not foundPrime
+#while not foundPrime
 while s() + p[n] < lim:
     n += 1
 print n
