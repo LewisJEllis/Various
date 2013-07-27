@@ -8,11 +8,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
 # the programmatic way
-s = 0
-for i in range(3,1000):
-  if (i % 3 == 0) or (i % 5 == 0):
-    s += i
-print s
+print sum([i for i in range(3,1000) if i % 3 == 0 or i % 5 == 0])
 
 # the mathematic way: mult(3) + mult(5) - mult(15)
 s = (333*334/2)*3 + (199*200/2)*5 - (66*67/2)*15
