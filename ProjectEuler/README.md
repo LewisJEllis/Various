@@ -1,6 +1,6 @@
-I've done plenty of Project Euler in other languages in the past, but I've never kept good track of them before.
+Project Euler, in Python.
 
-So I am starting fresh on them with Python, hoping to become more familiar with the language.
+Lately, I've been trying to form a one-a-day habit.
 
 If you've never done Project Euler problems before, I recommend them - see http://ProjectEuler.net
 

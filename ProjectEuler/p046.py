@@ -1,14 +1,4 @@
-def sieve(n):
-  s = [False]*2 + [True]*(n-2)
-  lim = len(s) ** 0.5
-  for p,b in enumerate(s):
-    if p > lim:
-      break
-    if not b:
-      continue
-    for i in range(2*p,len(s),p):
-        s[i] = False
-  return [i for (i, b) in enumerate(s) if b]
+from helpers import sieve
 
 primes = sieve(10000)
 doublesquares = [2*n**2 for n in range(100)]

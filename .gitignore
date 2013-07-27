@@ -1,2 +1,4 @@
 *.pyc
 test.py
+.DS_Store
+.gitignore

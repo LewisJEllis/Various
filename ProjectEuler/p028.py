@@ -18,19 +18,18 @@ What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed 
 """
 Looking at the differences along the diagonals reveals a fairly simple set of sequences.
 Now we just take the sum of those sequences to 500 terms each.
-Here's the verbose method which represents the thoughts that went through my head
-I made it print out the steps in lieu of explaining the summation
+Here's the verbose method which represents the thoughts in coming to the solution
 """
 
 def printSum(n):
-  s = 2*n-1
-  m = (n-1)/2
-  print "sum of diagonals of %sx%s snake grid:" % (n,n)
-  for i in range(2,(n-1)*4-5,8):
-    print "  (%s+%s+%s+%s)*%s +" % (i, i+2, i+4, i+6, m)
-    s += (4*i+12)*m
-    m -= 1
-  print "  %s = %s" % (2*n-1, s)
+    s = 2*n-1
+    m = (n-1)/2
+    print "sum of diagonals of %sx%s snake grid:" % (n,n)
+    for i in range(2,(n-1)*4-5,8):
+        print "  (%s+%s+%s+%s)*%s +" % (i, i+2, i+4, i+6, m)
+        s += (4*i+12)*m
+        m -= 1
+    print "  %s = %s" % (2*n-1, s)
 printSum(5)
 
 # And here's the dense one-liner version, for kicks:

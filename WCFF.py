@@ -1,5 +1,7 @@
 """
-
+Will Code For Food challenge done at Penn
+5 problems given, increasingly desirable food rewards for solving each.
+It was a fun event. This is what I wrote to win my food.
 
 """
 
