@@ -1,6 +1,6 @@
 # Anything that seems like it could be reused in more than one problem goes here.
 
-# Sieve of Eratosthenes
+# Sieve of Eratosthenes, finds all primes less than n
 def sieve(n):
     s = [False]*2 + [True]*(n-2)
     lim = len(s) ** 0.5
@@ -21,6 +21,7 @@ def isPrimeSieve(n):
 
 fl = [1,1,2,3,5]
 
+# Returns the first n Fibonacci numbers
 def fibs(n):
     while n > len(fl):
         fl.append(fl[-1] + fl[-2])
