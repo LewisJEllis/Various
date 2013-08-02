@@ -16,8 +16,11 @@ def sieve(n):
 def isPrime(n):
     return all([n > 1] + [n % i != 0 for i in range(2,int(n**0.5+1))])
 
+pl = sieve(100000)
 def isPrimeSieve(n):
-    return all([n % p != 0 for p in sieve(int(n**0.5+1))])
+    if n >= len(pl)**2:
+        pl = sieve(int(n**0.5+1))
+    return all([n % p != 0 for p in pl])
 
 fl = [1,1,2,3,5]
 
@@ -31,3 +34,9 @@ def fib(n):
     while n > len(fl):
         fl.append(fl[-1] + fl[-2])
     return fl[n-1]
+
+# '123' -> ['123','231', '312']
+def rotations(s):
+    for i in range(len(s)):
+        yield s
+        s = s[1:]+s[0]
