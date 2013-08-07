@@ -18,6 +18,7 @@ def isPrime(n):
 
 pl = sieve(100000)
 def isPrimeSieve(n):
+    global pl
     if n >= len(pl)**2:
         pl = sieve(int(n**0.5+1))
     return all([n % p != 0 for p in pl])
