@@ -1,32 +1,21 @@
-from helpers import sieve
+from helpers import sieve, isPrime
 
-lim = 1000000
-p = sieve(lim)
-pc = len(p)
+p = sieve(10000)
 
-for p in reverse(p):
-
-
-# how many consecutive primes to 88640sum
-n = 21
-# index of first one
-i = 0
-
-def s():
-    return sum(p[i:i+n])
-
-#while not foundPrime
-while s() + p[n] < lim:
-    n += 1
-print n
-print s()
-"""# n is now the most it can possibly be
-       imin imin+1 imin+2      
-nmax
-nmax-1
-nmax-2
-if sum(p()
-# max sum of first consecutive primes < 1000000
-
-while not sum(p[s:s+n])
-"""
+total = 0
+start = 0
+length = 0
+maxlen = 0
+while True:
+    if total + p[start+length] < 1000000:
+        total += p[start+length]
+        length += 1
+        if length > maxlen and isPrime(total):
+            if 1000000 - total < p[start+length]:
+                print total
+                break
+            maxlen = length
+    else:
+        total -= (p[start] + p[start+length-1])
+        length -= 2
+        start += 1
