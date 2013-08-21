@@ -1,4 +1,4 @@
-from helpers import sieve, isPrime
+from helpers import sieve, is_prime
 
 p = sieve(10000)
 
@@ -10,7 +10,7 @@ while True:
     if total + p[start+length] < 1000000:
         total += p[start+length]
         length += 1
-        if length > maxlen and isPrime(total):
+        if length > maxlen and is_prime(total):
             if 1000000 - total < p[start+length]:
                 print total
                 break

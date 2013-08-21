@@ -13,15 +13,30 @@ def sieve(n):
             s[i] = False
     return [i for (i, b) in enumerate(s) if b]
 
-def isPrime(n):
-    return all([n > 1] + [n % i != 0 for i in range(2,int(n**0.5+1))])
+def is_prime(n):
+    if n < 2:
+        return False
+    return all([n % i != 0 for i in range(2,int(n**0.5+1))])
 
-pl = sieve(100000)
-def isPrimeSieve(n):
-    global pl
-    if n >= len(pl)**2:
-        pl = sieve(int(n**0.5+1))
-    return all([n % p != 0 for p in pl])
+def is_prime_sieve(lim):
+    # returns a function which can check primality of anything up to lim
+
+    pl = sieve(int(lim**0.5)+1)
+    pls = set(pl)
+
+    def is_prime(n):
+        if n in pls:
+            return True
+
+        stop = int(n**0.5)+1
+        for p in pl:
+            if n % p == 0:
+                return False
+            if p > stop:
+                return True
+        return True
+
+    return is_prime
 
 fl = [1,1,2,3,5]
 

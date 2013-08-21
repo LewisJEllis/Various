@@ -2,6 +2,7 @@
 # From there, with no additional knowledge, I derive the key.
 n = eval('[' + open('p059_cipher.txt', 'r').readlines()[0] + ']')
 print sum([c ^ k for c, k in zip(n, ([max(n[i::3], key=n[i::3].count) ^ ord(' ') for i in range(3)])*401)])
+
 print (''.join([chr(max(n[i::3], key=n[i::3].count) ^ ord(' ')) for i in range(3)]))
 
 # That was the one-liner-battle form. Here's a more readable version.

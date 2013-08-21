@@ -1,8 +1,8 @@
-from helpers import isPrime
+from helpers import is_prime
 
 def longest(a, b):
     n = 0
-    while isPrime(n**2 + a*n + b):
+    while is_prime(n**2 + a*n + b):
         n += 1   
     return (n, a, b, a*b)
 
